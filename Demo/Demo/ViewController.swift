@@ -78,6 +78,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         activeInput = textView
     }
     
+    func textViewDidChange(_ textView: UITextView) {
+        if let text = textView.text, !text.isEmpty {
+            toolbar.doneButtonTitle = "Done"
+        } else {
+            toolbar.doneButtonImage = UIImage(named: "keyboard")
+        }
+    }
+    
     @objc private func doneButtonTitleFormDidChange(_ textField: UITextField) {
         if let text = textField.text, !text.isEmpty {
             toolbar.doneButtonTitle = text

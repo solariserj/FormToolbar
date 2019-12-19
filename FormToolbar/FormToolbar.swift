@@ -65,9 +65,16 @@ final public class FormToolbar: UIToolbar {
         if let button = _doneButton {
             return button
         }
-        let button = UIBarButtonItem(title: self.doneButtonTitle, style: .done, target: self, action: #selector(doneButtonDidtap(_:)))
-        _doneButton = button
-        return button
+        
+        if let image = doneButtonImage {
+            let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(doneButtonDidtap(_:)))
+            _doneButton = button
+            return button
+        } else {
+            let button = UIBarButtonItem(title: self.doneButtonTitle, style: .done, target: self, action: #selector(doneButtonDidtap(_:)))
+            _doneButton = button
+            return button
+        }
     }
     
     private var formItems: [FormItem] = []
@@ -127,6 +134,15 @@ final public class FormToolbar: UIToolbar {
     /// Done button's title
     /// Default is `"Done"`.
     public var doneButtonTitle: String = "Done" {
+        didSet {
+            _doneButton = nil
+            updateBarItems()
+        }
+    }
+    
+    /// Done button's image
+    /// Default is `"Done"`.
+    public var doneButtonImage: UIImage? {
         didSet {
             _doneButton = nil
             updateBarItems()
