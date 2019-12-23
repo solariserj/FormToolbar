@@ -59,6 +59,7 @@
 		4D7C81741E57F7F100C6DD71 = {
 			isa = PBXGroup;
 			children = (
+				4D7C81821E57F7F100C6DD71 /* FormInfo.plist */,
 				4D7C81801E57F7F100C6DD71 /* FormToolbar */,
 				4D7C818B1E57F7F200C6DD71 /* FormToolbarTests */,
 				4D7C817F1E57F7F100C6DD71 /* Products */,
@@ -78,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				4D7C81811E57F7F100C6DD71 /* FormToolbar.h */,
-				4D7C81821E57F7F100C6DD71 /* FormInfo.plist */,
 				4DB4C8AF1E57F8B900934E22 /* FormToolbar.swift */,
 				4DB4C8BA1E58376400934E22 /* FormInput.swift */,
 				4DB4C8B11E57F97900934E22 /* UIBarButtonItem+Hidden.swift */,
@@ -342,7 +342,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FormToolbar/FormInfo.plist;
+				INFOPLIST_FILE = FormInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.FormToolbar";
@@ -362,7 +362,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FormToolbar/FormInfo.plist;
+				INFOPLIST_FILE = FormInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.FormToolbar";
